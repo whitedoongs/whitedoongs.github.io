@@ -1,4 +1,4 @@
-웹퍼블리셔 6년차 이연경의 2019-2024 Portfolio 페이지 입니다.<br>
+웹퍼블리셔 이연경의 2019-2024 Portfolio 페이지 입니다.<br>
 
 🚀 Skills<br>
 ![js](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)

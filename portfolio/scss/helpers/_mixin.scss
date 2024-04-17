@@ -1,0 +1,72 @@
+@mixin font-face($name, $path, $weight: null, $format: null) {
+    $src: null;
+    $src: append($src, url($path) format($format), comma);
+    @font-face {
+        font-family: $name;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+// 프리텐다드
+@include font-face('Pretendard', '../../font/Pretendard-Thin.woff2', 100, woff2);
+@include font-face('Pretendard', '../../font/Pretendard-ExtraLight.woff2', 200, woff2);
+@include font-face('Pretendard', '../../font/Pretendard-Light.woff2', 300, woff2);
+@include font-face('Pretendard', '../../font/Pretendard-Regular.woff2', 400, woff2);
+@include font-face('Pretendard', '../../font/Pretendard-Medium.woff2', 500, woff2);
+@include font-face('Pretendard', '../../font/Pretendard-SemiBold.woff2', 600, woff2);
+@include font-face('Pretendard', '../../font/Pretendard-Bold.woff2', 700, woff2);
+@include font-face('Pretendard', '../../font/Pretendard-ExtraBold.woff2', 800, woff2);
+@include font-face('Pretendard', '../../font/Pretendard-Black.woff2', 900, woff2);
+// 지마켓산스
+@include font-face('GmarketSans', '../../font/GmarketSansTTFLight.ttf', 300, truetype);
+@include font-face('GmarketSans', '../../font/GmarketSansTTFMedium.ttf', 400, truetype);
+@include font-face('GmarketSans', '../../font/GmarketSansTTFBold.ttf', 700, truetype);
+// 에스코어드림
+@include font-face('S-CoreDream', '../../font/SCDream4.ttf', 400, truetype);
+@include font-face('S-CoreDream', '../../font/SCDream5.ttf', 500, truetype);
+@include font-face('S-CoreDream', '../../font/SCDream6.ttf', 600, truetype);
+@include font-face('S-CoreDream', '../../font/SCDream8.ttf', 800, truetype);
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+}
+
+@mixin dim {
+  content:'';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+@mixin ellipsis($lines: 1) {
+  @if ($lines==1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}

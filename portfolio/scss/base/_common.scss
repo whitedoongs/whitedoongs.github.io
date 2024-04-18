@@ -3,7 +3,6 @@
 	--side-padding:20px;
 
 	--font-color: #000;
-	--point-color: #BB86FC;
 	
 	--font-size-s: 12px;
 	--font-size-m: 22px;
@@ -22,35 +21,41 @@
 	--bg-dark: #000;
 }
 
-// light mode
-:root[data-dark=false] {
-	--txtColor: #222;
-	--txtColorsub: #444;
-	--txtColormid: #999;
+// dark mode
+:root[data-theme=dark] {
+	--point-color: #BB86FC;
+	--point-color-deep: #7f1bfa;
 
-	--mainColor: #0FFFB7;
+	// --txtColor: #222;
+	// --txtColorsub: #444;
+	// --txtColormid: #999;
 
-	--background: #fff;
-	--grayscale-01: #dddddd;
+	// --mainColor: #0FFFB7;
+
+	// --background: #fff;
+	// --grayscale-01: #dddddd;
 }
 	
-// dark mode
-:root[data-dark=true] {
-	--txtColor: #fff;
-	--txtColorsub: #d5d5d5;
-	--txtColormid: #999;
-	--mainColor: #-;
-	--background: #161616;
-	--grayscale-01: #3b3b3b;
+// light mode
+:root[data-theme=light] {
+	--point-color: #5D5FEF;
+	--point-color-deep: #272af1;
 }
 
 body{
 	*{
-			font: {
-					family: 'Pretendard';
-					size: var(--font-size-s);
-					weight: normal;    
-			};
-			color: var(--font-color);
+		font: {
+			family: 'Pretendard';
+			size: var(--font-size-s);
+			weight: normal;    
+		};
+		color: var(--font-color);
+	}
+}
+
+button{
+	background-color: var(--point-color);
+	&:hover{
+		background-color: var(--point-color-deep);
 	}
 }

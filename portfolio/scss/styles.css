@@ -56,7 +56,6 @@ table {
 :root {
   --side-padding:20px;
   --font-color: #000;
-  --point-color: #BB86FC;
   --font-size-s: 12px;
   --font-size-m: 22px;
   --font-size-l: 30px;
@@ -73,22 +72,14 @@ table {
   --bg-dark: #000;
 }
 
-:root[data-dark=false] {
-  --txtColor: #222;
-  --txtColorsub: #444;
-  --txtColormid: #999;
-  --mainColor: #0FFFB7;
-  --background: #fff;
-  --grayscale-01: #dddddd;
+:root[data-theme=dark] {
+  --point-color: #BB86FC;
+  --point-color-deep: #7f1bfa;
 }
 
-:root[data-dark=true] {
-  --txtColor: #fff;
-  --txtColorsub: #d5d5d5;
-  --txtColormid: #999;
-  --mainColor: #-;
-  --background: #161616;
-  --grayscale-01: #3b3b3b;
+:root[data-theme=light] {
+  --point-color: #5D5FEF;
+  --point-color-deep: #272af1;
 }
 
 body * {
@@ -96,6 +87,13 @@ body * {
   font-size: var(--font-size-s);
   font-weight: normal;
   color: var(--font-color);
+}
+
+button {
+  background-color: var(--point-color);
+}
+button:hover {
+  background-color: var(--point-color-deep);
 }
 
 @font-face {

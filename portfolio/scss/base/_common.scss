@@ -1,12 +1,17 @@
 // default
 :root {
 	--side-padding:20px;
+	--top-padding:100px;
 
 	--font-color: #000;
 	
 	--font-size-s: 12px;
+	--font-size-sm: 18px;
 	--font-size-m: 22px;
 	--font-size-l: 30px;
+	--font-size-xl: 50px;
+	--font-size-xxl: 80px;
+
 	--font-weight-1: 100;
 	--font-weight-2: 200;
 	--font-weight-3: 300;
@@ -18,20 +23,17 @@
 	--font-weight-9: 900;
 	
 	--bg-white: #fff;
-	--bg-dark: #000;
+	--bg-dark:  #000;
 }
 
 // dark mode
 :root[data-theme=dark] {
 	--point-color: #BB86FC;
 	--point-color-deep: #7f1bfa;
-
 	// --txtColor: #222;
 	// --txtColorsub: #444;
 	// --txtColormid: #999;
-
 	// --mainColor: #0FFFB7;
-
 	// --background: #fff;
 	// --grayscale-01: #dddddd;
 }
@@ -47,7 +49,7 @@ body{
 		font: {
 			family: 'Pretendard';
 			size: var(--font-size-s);
-			weight: normal;    
+			// weight: normal;    
 		};
 		color: var(--font-color);
 	}
